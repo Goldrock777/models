@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Portfolio - NHAIA</title>
+    <meta name="description" content="Professional model portfolio showcasing fashion, editorial, and commercial work">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 50;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="border-b border-gray-800 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-light tracking-widest">kavyar</div>
+            <div class="flex gap-4">
+                <button class="text-sm hover:text-gray-300">Log In</button>
+                <button class="bg-white text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-200">
+                    Sign Up
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 p-6">
+        <!-- Left Sidebar -->
+        <aside class="lg:w-80 shrink-0">
+            <div class="bg-gray-900 rounded-lg p-6">
+                <!-- Profile -->
+                <div class="flex justify-between items-start mb-4">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200" 
+                             alt="Profile" 
+                             class="w-16 h-16 rounded-full object-cover">
+                        <span class="absolute -bottom-1 -right-1 bg-purple-600 text-xs px-2 py-0.5 rounded-full font-bold">PRO</span>
+                    </div>
+                    <button class="text-gray-400 hover:text-white">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <h1 class="text-2xl font-bold mb-1">NHAIA</h1>
+                <p class="text-sm text-gray-400 mb-4">Model · Vancouver, BC Canada</p>
+
+                <!-- Collaborators -->
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="flex -space-x-2">
+                        <img src="https://i.pravatar.cc/150?img=1" class="w-8 h-8 rounded-full border-2 border-gray-900">
+                        <img src="https://i.pravatar.cc/150?img=5" class="w-8 h-8 rounded-full border-2 border-gray-900">
+                    </div>
+                    <span class="text-xs text-gray-400">Worked with Alexandra Berezhna, Abhinna Patel, and 39 others</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex gap-3 mb-6">
+                    <button class="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg flex items-center justify-center gap-2 font-medium">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
+                        </svg>
+                        Connect
+                    </button>
+                    <button class="flex-1 bg-gray-800 hover:bg-gray-700 text-white py-3 rounded-lg flex items-center justify-center gap-2 font-medium">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        Hire
+                    </button>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                    <div>
+                        <div class="text-xl font-bold">5'8.5"</div>
+                        <div class="text-gray-400">Height</div>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold">38-27-39"</div>
+                        <div class="text-gray-400">Bust-Waist-Hips</div>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold">39 EU</div>
+                        <div class="text-gray-400">Shoe</div>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold">Medium-light</div>
+                        <div class="text-gray-400">Skin Tone</div>
+                    </div>
+                    <div class="col-span-2">
+                        <div class="text-xl font-bold">Green</div>
+                        <div class="text-gray-400">Eye Color</div>
+                    </div>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="border-t border-gray-800 pt-4 mb-6">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm">👍 2 Recommendations</span>
+                        <button class="text-sm text-gray-400 hover:text-white">See all</button>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex gap-4 mb-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Bio -->
+                <div class="text-sm text-gray-300 leading-relaxed">
+                    Hey there! I'm NHAIA, a passionate model and artist based in Vancouver, Canada. I bring energy, creativity, and professionalism to every project. Pursuing a degree in Kinesiology and Sports Science, I love integrating dance and movement into my work. As the founder of a sustainable textile company, I aim to innovate and inspire. Let's create something amazing together!
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1">
+            <!-- Model Card -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-1">Model Card</h2>
+                        <p class="text-gray-400 text-sm">5'8.5" 38-27-39" →</p>
+                    </div>
+                    <span class="text-xs text-gray-500">Updated 44w ago</span>
+                </div>
+                <div class="bg-gray-200 rounded-lg p-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400" alt="Model card 1" class="w-full h-auto object-cover rounded">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400" alt="Model card 2" class="w-full h-auto object-cover rounded">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Model card 3" class="w-full h-auto object-cover rounded">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400" alt="Model card 4" class="w-full h-auto object-cover rounded">
+                </div>
+            </div>
+
+            <!-- Portfolio Section -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Portfolio</h2>
+                
+                <!-- Filter Tabs -->
+                <div class="flex gap-3 mb-6 flex-wrap">
+                    <button onclick="filterPortfolio('all')" id="tab-all" class="px-6 py-2 rounded-full text-sm font-medium bg-white text-black">
+                        Hot
+                    </button>
+                    <button onclick="filterPortfolio('new')" id="tab-new" class="px-6 py-2 rounded-full text-sm font-medium bg-gray-800 text-white hover:bg-gray-700">
+                        New
+                    </button>
+                    <button onclick="filterPortfolio('top')" id="tab-top" class="px-6 py-2 rounded-full text-sm font-medium bg-gray-800 text-white hover:bg-gray-700">
+                        Top
+                    </button>
+                    <button onclick="filterPortfolio('loved')" id="tab-loved" class="px-6 py-2 rounded-full text-sm font-medium bg-gray-800 text-white hover:bg-gray-700">
+                        Loved
+                    </button>
+                </div>
+
+                <!-- Portfolio Grid -->
+                <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Images will be added by JavaScript -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-4xl font-light hover:text-gray-300">×</button>
+        <img id="lightbox-img" src="" alt="Portfolio" class="max-w-full max-h-[90vh] object-contain">
+    </div>
+
+    <script>
+        // Portfolio images data
+        const portfolioImages = [
+            { id: 1, url: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800', category: 'all' },
+            { id: 2, url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800', category: 'all' },
+            { id: 3, url: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800', category: 'new' },
+            { id: 4, url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800', category: 'all' },
+            { id: 5, url: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=800', category: 'top' },
+            { id: 6, url: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800', category: 'loved' },
+            { id: 7, url: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800', category: 'all' },
+            { id: 8, url: 'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800', category: 'new' },
+            { id: 9, url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800', category: 'top' },
+        ];
+
+        // Render portfolio images
+        function renderPortfolio(category = 'all') {
+            const grid = document.getElementById('portfolio-grid');
+            grid.innerHTML = '';
+            
+            const filtered = category === 'all' 
+                ? portfolioImages 
+                : portfolioImages.filter(img => img.category === category || img.category === 'all');
+            
+            filtered.forEach(image => {
+                const div = document.createElement('div');
+                div.className = 'aspect-[3/4] overflow-hidden rounded-lg cursor-pointer group relative';
+                div.onclick = () => openLightbox(image.url);
+                div.innerHTML = `
+                    <img src="${image.url}" alt="Portfolio ${image.id}" class="w-full h-full object-cover hover-scale">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+                `;
+                grid.appendChild(div);
+            });
+        }
+
+        // Filter portfolio
+        function filterPortfolio(category) {
+            // Update button styles
+            document.querySelectorAll('[id^="tab-"]').forEach(btn => {
+                btn.className = 'px-6 py-2 rounded-full text-sm font-medium bg-gray-800 text-white hover:bg-gray-700';
+            });
+            document.getElementById(`tab-${category}`).className = 'px-6 py-2 rounded-full text-sm font-medium bg-white text-black';
+            
+            // Render filtered images
+            renderPortfolio(category);
+        }
+
+        // Lightbox functions
+        function openLightbox(url) {
+            document.getElementById('lightbox-img').src = url;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        // Initialize
+        renderPortfolio('all');
+    </script>
+</body>
+</html>
